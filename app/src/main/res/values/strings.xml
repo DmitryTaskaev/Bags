@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lab11Json</string>
+    <string name="TaskList">ДОБРО ПОЖАЛОВАТЬ</string>
+    <string name="TaskListMain">Список дел</string>
+    <string name="nameTask">Имя задачи</string>
+    <string name="textTask">Описание задачи</string>
+    <string name="btnTask">Добавить задачу</string>
+    <string name="myTask">Мои задачи</string>
+    <string name="namesTask">Исполнитель задачи</string>
+    <string name="namesAddTask">Добавление задачи</string>
+    <string name="priorityTask">Важная задача</string>
+    <string name="delTask">Удалить задачу</string>
+    <string name="PreorityTask">Приоритет задачи</string>
+    <string name="PreorityAdd">+</string>
+    <string name="dialogTitle">Delete File</string>
+    <string name="dialogMessage">Deleting file may be harm your system</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/307-11/Desktop/ComplitedWorkLab13-master/app/src/main/res/layout/activity_main.xml" value="0.3532608695652174" />
+        <entry key="..\:/Users/307-11/Desktop/ComplitedWorkLab13-master/app/src/main/res/layout/activity_task_info.xml" value="0.3532608695652174" />
+        <entry key="..\:/Users/307-11/Desktop/ComplitedWorkLab13-master/app/src/main/res/layout/dialog_signin.xml" value="0.3532608695652174" />
+        <entry key="..\:/Users/307-11/Desktop/Dadadada/TasksListDataBase/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/307-11/Desktop/LAB11-master/app/src/main/res/layout/activity_main.xml" value="0.3532608695652174" />
+        <entry key="..\:/Users/307-11/Desktop/LAB11-master/app/src/main/res/layout/activity_task_info.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/307-11/Desktop/LAB11-master/app/src/main/res/layout/tasklist.xml" value="0.25" />
+        <entry key="..\:/Users/307-11/Desktop/Lab-11-master/app/src/main/res/layout/activity_hello.xml" value="0.3473731884057971" />
+        <entry key="..\:/Users/307-11/Desktop/Lab-11-master/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/307-11/Desktop/Lab-11-master/app/src/main/res/layout/activity_task_info.xml" value="0.3473731884057971" />
+        <entry key="..\:/Users/307-11/Desktop/Lab-11-master/app/src/main/res/layout/tasklist.xml" value="0.33" />
+        <entry key="..\:/Users/307-11/Desktop/Lab11Json/app/src/main/res/layout/activity_hello.xml" value="0.2" />
+        <entry key="..\:/Users/307-11/Desktop/Lab11Json/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/307-11/Desktop/Lab11Json/app/src/main/res/layout/activity_task_info.xml" value="0.25" />
+        <entry key="..\:/Users/307-11/Desktop/Labs11-master/app/src/main/res/layout/activity_hello.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/307-11/Desktop/Labs11-master/app/src/main/res/layout/activity_task_info.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dmitriy/Desktop/ComplitedWorkLab11-master/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Dmitriy/Desktop/ComplitedWorkLab11-master/app/src/main/res/layout/activity_task_info.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Dmitriy/Desktop/ComplitedWorkLab11-master/app/src/main/res/layout/tasklist.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Dmitriy/Desktop/TaskListDataBase/TasksListDataBase/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Dmitriy/Desktop/TaskListDataBase/TasksListDataBase/app/src/main/res/layout/tasklist.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/Dmitriy/Desktop/TestRepo-master/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="androidx.room.Entity" />
+    </list>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
