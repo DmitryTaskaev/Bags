@@ -6,10 +6,12 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.view.isVisible
@@ -20,6 +22,7 @@ import com.bignerdranch.android.lab11json.data.models.Priority
 import com.bignerdranch.android.lab11json.data.models.Tasks
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.concurrent.Executors
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dateTask: CalendarView
     private lateinit var btnTask: Button
     private lateinit var delTask: Button
+    private var calendarDate: String? = null
     private lateinit var addPreor: Button
     private lateinit var btnTaskInfo: ImageButton
     private lateinit var tvHead: TextView
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -61,13 +66,19 @@ class MainActivity : AppCompatActivity() {
         spin = findViewById(R.id.spinnerPreor)
 
 
+
+
         var index = intent.getIntExtra("index",-1)
         var txtuid = intent.getStringExtra("uid")
 
         if(txtuid != null){
             uid = UUID.fromString(txtuid)
         }
-        dateTask.setOnDateChangeListener(){view, year, month, dayOfMonth -> date = "$dayOfMonth.${month+1}.$year"}
+        val currentDate = LocalDateTime.now()
+        val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+        val formatted = currentDate.format(formatter)
+        calendarDate = formatted
+        dateTask.setOnDateChangeListener(){_, year, month, dayOfMonth -> calendarDate = "$dayOfMonth.${month+1}.$year"}
         val cl = Calendar.getInstance()
         UpdateSpinner()
 
@@ -104,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                 //Добавление в базу
                 //getTypeId(viewBinding.spinnerType.selectedItem.toString())dDA
                 exec.execute{
-                    TaskDAO.addTasks(Tasks(ui!!,preoritytTask.selectedItemPosition+1,nameTask.text.toString(),namesTask.text.toString(),textTask.text.toString(),date.toString()))
+                    TaskDAO.addTasks(Tasks(ui!!,preoritytTask.selectedItemPosition+1,nameTask.text.toString(),namesTask.text.toString(),textTask.text.toString(),calendarDate.toString()))
                 }
             }
             else
@@ -113,7 +124,7 @@ class MainActivity : AppCompatActivity() {
                 val TaskDAO = db.TasksDAO()
                 val exec = Executors.newSingleThreadExecutor()
                 exec.execute{
-                    TaskDAO.saveTasks(Tasks(uid!!,preoritytTask.selectedItemPosition+1,nameTask.text.toString(),namesTask.text.toString(),textTask.text.toString(),date.toString()))
+                    TaskDAO.saveTasks(Tasks(uid!!,preoritytTask.selectedItemPosition+1,nameTask.text.toString(),namesTask.text.toString(),textTask.text.toString(),calendarDate.toString()))
                 }
             }
             super.onBackPressed()
